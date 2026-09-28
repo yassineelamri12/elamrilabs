@@ -33,7 +33,7 @@ The page respects `prefers-reduced-motion`.
 
 ## Things to personalise
 
-- **Email:** search for `hello@elamrilabs.com` in `index.html`.
+- **Email:** `yassine@elamrilabs.com`, set in the contact section of `index.html`.
 - **Domain:** `https://elamrilabs.com/` appears in the canonical, `og:url` and JSON-LD tags.
 - **Social preview image:** add `assets/og.png` (1200×630).
 
