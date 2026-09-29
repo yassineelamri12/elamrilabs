@@ -4,6 +4,8 @@ Landing page for **El Amri Labs**, the studio of Yassine El Amri. It covers AI, 
 
 It's a static site: plain HTML, CSS and JavaScript, with no build step or dependencies.
 
+> Building a site for a **client**? Use [`client-starter/`](client-starter/README.md), the React + Watermelon UI + React Spring template, and follow the playbook in [`.claude/skills/client-website`](.claude/skills/client-website/SKILL.md).
+
 ```
 index.html              page content + SEO meta / structured data
 styles.css              design system, layout, animations

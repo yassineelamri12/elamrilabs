@@ -1,0 +1,35 @@
+/*
+ * CLIENT THEME — the only file you need to touch for a new client's look.
+ *
+ * 1. Pick colours + fonts with the client on https://www.realtimecolors.com
+ * 2. Export → CSS, and paste the variables below (same names: --text,
+ *    --background, --primary, --secondary, --accent).
+ * 3. Set the heading/body fonts and load them in index.html.
+ *
+ * Everything else (cards, borders, muted text, Watermelon blocks…) is derived
+ * from these in src/index.css.
+ */
+:root {
+  --text: #0c0d10;
+  --background: #fbfbfc;
+  --primary: #3a5bd9;
+  --secondary: #a3b4f0;
+  --accent: #6f4ae6;
+
+  /* Text colour used on top of --primary (buttons). Usually white or --background. */
+  --on-primary: #ffffff;
+
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius: 0.9rem;
+}
+
+/* Dark mode: paste Realtime Colors' dark export here (or delete this block). */
+.dark {
+  --text: #eeeff3;
+  --background: #050506;
+  --primary: #6d8bff;
+  --secondary: #3048b8;
+  --accent: #9b7bff;
+  --on-primary: #050506;
+}

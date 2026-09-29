@@ -1,0 +1,6 @@
+# Only the static landing page at the repo root is deployed.
+client-starter/
+.claude/
+.mcp.json
+CLAUDE.md
+scripts/

@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "./styles/theme.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * shadcn / Watermelon tokens, derived from the 5 Realtime Colors variables in
+ * styles/theme.css. Blocks use these (bg-background, text-muted-foreground…),
+ * so a new palette re-skins every section at once.
+ */
+:root, .dark {
+  --foreground: var(--text);
+  --card: color-mix(in oklab, var(--background) 96%, var(--text));
+  --card-foreground: var(--text);
+  --popover: var(--card);
+  --popover-foreground: var(--text);
+  --primary-foreground: var(--on-primary);
+  --secondary-foreground: var(--text);
+  --muted: color-mix(in oklab, var(--background) 92%, var(--text));
+  --muted-foreground: color-mix(in oklab, var(--text) 58%, var(--background));
+  --accent-foreground: var(--on-primary);
+  --destructive: #e5484d;
+  --border: color-mix(in oklab, var(--text) 11%, var(--background));
+  --input: var(--border);
+  --ring: color-mix(in oklab, var(--primary) 60%, transparent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-heading); text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
